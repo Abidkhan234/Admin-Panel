@@ -1,0 +1,58 @@
+body{
+    min-height: 100dvh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.sidebar {
+    transition: all 0.4s ease-in-out;
+}
+
+.sidebar.close {
+    width: 55px !important;
+
+    .logo img {
+        width: 0;
+    }
+
+    .logo button {
+        padding: 6px;
+    }
+
+    .logo button svg {
+        transition: all 0.4s ease-in-out;
+        rotate: -180deg;
+    }
+
+}
+
+.sub-menu {
+    transition: all 0.4s ease-in-out;
+    display: grid;
+    grid-template-rows: 0fr;
+}
+
+.sub-menu.show {
+    padding: 12px;
+    grid-template-rows: 1fr;
+}
+
+.sidebar>ul>li a,
+.sidebar>ul>li button {
+    border-radius: 4px;
+    transition: all 250ms ease-in-out;
+}
+
+.sub-menu li a {
+    padding: 0 10px;
+}
+
+.sidebar>ul>li a:hover,
+.sidebar>ul>li button:hover {
+    background-color: oklch(0.279 0.041 260.031);
+}
+
+.rotate{
+    rotate: -180deg;
+}
